@@ -1,6 +1,6 @@
 # yt-dlp-kinopub
 
-*A [yt-dlp](https://github.com/yt-dlp/yt-dlp) extractor plugin for kino.pub / kino.watch: every quality, every audio track (labelled by studio) and all subtitles, whole series as playlists. Log in with your browser's cookies (`--cookies-from-browser`), or authorize the JSON API once for headless machines. The documentation below is in Russian.*
+*A [yt-dlp](https://github.com/yt-dlp/yt-dlp) extractor plugin for kino.pub / kino.watch: every quality, every audio track (labelled by studio) and all subtitles, whole series as playlists. Log in with your browser's cookies (`--cookies-from-browser`), or authorize the JSON API once for headless machines. This plugin exists for people who already live in yt-dlp; for kino.pub itself the dedicated [kinopub](https://github.com/niazlv/kinopub-downloader) CLI is the better tool. The documentation below is in Russian.*
 
 Плагин-экстрактор для [yt-dlp](https://github.com/yt-dlp/yt-dlp): kino.pub / kino.watch. После установки сайт работает в yt-dlp как любой другой:
 
@@ -8,7 +8,9 @@
 yt-dlp --cookies-from-browser safari "https://kino.watch/item/view/38290/s1e1"
 ```
 
-Это отдельная реализация в идиомах yt-dlp (куки браузера, аргументы экстрактора, кэш сессии, `-f`/`-S`), не обёртка над утилитой [`kinopub`](https://github.com/niazlv/kinopub-downloader). Утилита и плагин друг от друга не зависят и могут жить рядом.
+> **Это только поддержка yt-dlp.** Плагин нужен тем, кто уже пользуется yt-dlp и хочет, чтобы kino.pub работал там же, теми же флагами и конфигом. Для самого kino.pub лучше отдельная утилита [`kinopub`](https://github.com/niazlv/kinopub-downloader): она знает про CDN сайта (адаптивно снижает параллельность на `429`), докачивает и проверяет загрузки (`doctor`), откладывает проблемную серию и добирает её позже, даёт интерактивные меню качества, дорожек и субтитров, шлёт уведомления и хранит авторизацию зашифрованной. Здесь всего этого нет и не будет: это ограничения yt-dlp, а не плагина.
+
+Это отдельная реализация в идиомах yt-dlp (куки браузера, аргументы экстрактора, кэш сессии, `-f`/`-S`), не обёртка над утилитой. Утилита и плагин друг от друга не зависят и могут жить рядом.
 
 ## Быстрый старт
 
