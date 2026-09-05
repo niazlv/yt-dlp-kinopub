@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yt-dlp-kinopub"
-version = "0.1.0"
+version = "0.1.1"
 description = "yt-dlp extractor plugin for kino.pub / kino.watch"
 readme = "README.md"
 license = { file = "LICENSE" }
