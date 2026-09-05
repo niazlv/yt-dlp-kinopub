@@ -10,6 +10,21 @@ yt-dlp --cookies-from-browser safari "https://kino.watch/item/view/38290/s1e1"
 
 Это отдельная реализация в идиомах yt-dlp (куки браузера, аргументы экстрактора, кэш сессии, `-f`/`-S`), не обёртка над утилитой [`kinopub`](https://github.com/niazlv/kinopub-downloader). Утилита и плагин друг от друга не зависят и могут жить рядом.
 
+## Быстрый старт
+
+```bash
+pip install yt-dlp-kinopub
+yt-dlp --cookies-from-browser safari "https://kino.watch/item/view/38290/s1e1"
+```
+
+Нужны yt-dlp и ffmpeg: видео и звук в HLS лежат отдельно, и yt-dlp склеивает их через ffmpeg (`brew install ffmpeg`, `apt install ffmpeg`). Вместо `safari` подставьте браузер, в котором вы залогинены на сайте. Посмотреть, что доступно, до скачивания:
+
+```bash
+yt-dlp --cookies-from-browser safari -F "https://kino.watch/item/view/38290/s1e1"
+```
+
+Ссылка на сериал без `/sNeM` скачает все серии всех сезонов. Остальное ниже: другие способы входа, формы ссылок, выбор дорожек и субтитров.
+
 ## Установка
 
 Любой из способов:
